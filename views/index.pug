@@ -8,6 +8,8 @@ block content
   div(id = "target") Clap for me
   script.
     let clap_count = 0
+    let a = "Clap"
+    let b = "times"
     function moreClaps(){
       clap_count = clap_count + 2;
-      document.getElementById("target").innerHTML= "Clap " clap_count " times";}
+      document.getElementById("target").innerHTML= a clap_count b ;}
