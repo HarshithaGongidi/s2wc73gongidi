@@ -3,6 +3,13 @@ extends layout
 block content
   h1= title
   p All American is my favorite series
-  button(type='button' class='btn btn-secondary') Button
-  br.
-  div#target Clap for me
+  button(type='button' class='btn btn-secondary' onclick='moreClaps ()') Press Me
+ 
+  div(id = "target") Clap for me
+  script.
+    let clap_count  =0
+  function moreClaps()
+        {
+           clap_count = clap_count + 2;
+           document.getElementById("target").innerHTML= clap_count;
+        }
