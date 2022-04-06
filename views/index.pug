@@ -6,12 +6,10 @@ block content
   button(type='button' class='btn btn-secondary' onclick='moreClaps ()') Press Me
  
   div(id = "target") Clap for me
-  p Clap
   script.
     let clap_count = 0
     let a = "Clap"
     let b = "times"
     function moreClaps(){
       clap_count = clap_count + 2;
-      document.getElementById("target").innerHTML= clap_count;}
-  P times 
+      document.getElementById("target").innerHTML= clap_count + "times";}
