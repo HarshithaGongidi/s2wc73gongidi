@@ -8,7 +8,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var RabbitRouter = require('./routes/Rabbit');
-var AddmodsRouter = require('./routes/Rabbit');
+var AddmodsRouter = require('./routes/addmods');
 var SelectorRouter = require('./routes/Selector');
 var app = express();
 
