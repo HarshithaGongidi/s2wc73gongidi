@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET RABBIT. */
 router.get('/', function(req, res, next) {
-  res.render('Rabbit', { title: 'Search Results - Rabbit' });
+  let query = req.query
+    console.log(`rows ${query.rows}`)
+    console.log(`cols ${query.cols}`)
+    res.render('addmods', { title: "addmods", query: query});
 });
 
 module.exports = router;
