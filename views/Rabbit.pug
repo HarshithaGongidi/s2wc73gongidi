@@ -27,3 +27,8 @@ block content
                 div(class="col-sm-2" onclick=`buy(${JScode})`) #{v.age}
                 div(class="col-sm-2" onclick=`buy(${JScode})`) #{v.color}
                 div(class="col-sm-2" onclick=`buy(${JScode})`) #{v.weight}
+script.             
+    function buy(itemNo)
+    {
+        alert(`you purchased Item ${itemNo+1}`)
+    }
