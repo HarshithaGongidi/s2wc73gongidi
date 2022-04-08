@@ -3,26 +3,14 @@ extends layout
 block content
   h1= title
   
-  - let items = results;
+  - let item = results;
 
          div(class="container-fluid")
 
-            div(class="row m-1")
+            div(class="row")
 
-              each item in items  
-
-                - let destination = `dispatch(\"/resource/update?id=${item._id}\")`
+              each item in JSCode  
 
                   div(class="col-sm-2", class="m-1") Item #{item.age}(#{item.color}) is #{item.weight}
-
-                    button.btn( class="btn-primary ml-1", onclick= destination) Update
-
-   
-
-                        script.
-
-                          function dispatch(path){
-
-                                window.location.href=path
 
                                 }
