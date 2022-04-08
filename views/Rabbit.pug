@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   
-  - let item = results;
+  - let results = ["age", "color", "weight"]
 
          div(class="container-fluid")
 
@@ -11,6 +11,7 @@ block content
 
               each item in JSCode  
 
-                  div(class="col-sm-2", class="row") Item #{item.age}(#{item.color}) is #{item.weight}
-
+                  div(id = age class="col-sm-2")
+                  div(id = color class="col-sm-2")
+                  div(id = weight class="col-sm-2")
                                 }
