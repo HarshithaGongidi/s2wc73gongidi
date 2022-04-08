@@ -2,16 +2,28 @@ extends layout
 
 block content
   h1= title
-  
-  - let results = ["age", "color", "weight"]
 
-         div(class="container-fluid")
-
-            div(class="row")
-
-              each item in JSCode  
-
-                  div(id = age class="col-sm-2")
-                  div(id = color class="col-sm-2")
-                  div(id = weight class="col-sm-2")
-                                }
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let results  = [
+                    {
+                        "age": "2",
+                        "color": "white",
+                        "weight": "5.5 lbs"
+                    },
+                    {
+                        "age": "1",
+                        "color": "brown",
+                        "weight": "3.2 lbs"
+                    },
+                    {
+                        "age": "3",
+                        "color": "black",
+                        "weight": "4.5 lbs"
+                    },                   
+                ]
+            each v,JScode in results
+                div(class="col-sm-2" onclick=`buy(${JScode})`) #{v.age}
+                div(class="col-sm-2" onclick=`buy(${JScode})`) #{v.color}
+                div(class="col-sm-2" onclick=`buy(${JScode})`) #{v.weight}
